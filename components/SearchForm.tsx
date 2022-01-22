@@ -22,8 +22,8 @@ export default function ProjectForm() {
       <input onChange={search} type="text" />
 
       <ul>
-        {hits.map((hit: {projectID: string, name: string, languages: string, description: string}) => (
-            <li key={hit.projectID}>
+        {hits.map((hit: {entityId: string, name: string, languages: string, description: string}) => (
+            <li key={hit.entityId}>
               <div>{hit.name}</div>
               <div>{hit.languages}</div>
               <div>{hit.description}</div>

@@ -1,4 +1,3 @@
-// import type { NextApiRequest, NextApiResponse } from 'next'
 import { createIndex } from '../../components/redis';
 
 export default async function handler(req: any, res: any) {

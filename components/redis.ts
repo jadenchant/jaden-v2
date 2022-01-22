@@ -31,6 +31,13 @@ export async function createProject(data: any) {
   return id;
 }
 
+export async function getProject(id: any) {
+  await connect();
+
+  const repository = new Repository(schema, client);
+  return repository.fetch(id);
+}
+
 export async function createIndex() {
   await connect();
 
@@ -40,12 +47,13 @@ export async function createIndex() {
 
 export async function searchProjects(q: any) {
   await connect();
+
   const repository = new Repository(schema, client);
 
   const projects = await repository.search()
-    .where('name').eq(q)
-    .or('languages').eq(q)
-    .or('description').matches(q)
+    .where('name').equals(q)
+    .or('languages').equals(q)
+    // .or('description').match(q)
     .return.all();
 
   return projects;
