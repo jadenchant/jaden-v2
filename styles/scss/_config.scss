@@ -1,0 +1,45 @@
+// sass --watch styles/scss:styles/css
+
+$background-color: #d1d5db;
+$background-header: #363c45;
+$accent-color-1: #3e90cc;
+$accent-color-2: #ff6666;
+$accent-color-3: #c2ffee;
+$text-color: #929a9f;
+$text-color-2: #a8adb1;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: $accent-color-1;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Transitions
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-ease-2 {
+  transition: all 0.45s ease-in-out;
+}
+
+@mixin transition-ease-after-nav {
+  transition: all 0.2s ease-in-out;
+}

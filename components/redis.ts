@@ -58,3 +58,14 @@ export async function searchProjects(q: any) {
 
   return projects;
 }
+
+export async function getAllProjects() {
+  await connect();
+
+  const repository = new Repository(schema, client);
+
+  const projects = await repository.search()
+  .return.all();
+
+  return projects;
+}

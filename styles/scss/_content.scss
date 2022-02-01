@@ -1,0 +1,125 @@
+@import "config";
+@import "Header";
+
+section.content {
+  font-family: "lora";
+  position: relative;
+  width: 100%;
+  top: $header-height;
+  z-index: 0;
+
+  h1.title {
+    font-size: 2.5rem;
+    padding: 4vh 4vw 0 4vw;
+  }
+
+  .intro {
+    font-size: 1.4rem;
+    padding: 2vh 4.5vw 0 4.5vw;
+  }
+
+  .social {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a #github {
+      fill: $accent-color-1;
+    }
+    a #instagram {
+      fill: $accent-color-1;
+    }
+    a #twitter {
+      fill: $accent-color-1;
+    }
+  }
+}
+
+.hi-icon-wrap {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 0 3em;
+}
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 15px 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+
+  svg path {
+    fill: none;
+    stroke: #b6d7ee;
+    stroke-width: 0px;
+    stroke-linejoin: round;
+    transition: stroke-width 0.2s;
+  }
+}
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.hi-icon:before {
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Effect 9 */
+.hi-icon-effect-9 .hi-icon {
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.hi-icon-effect-9 .hi-icon:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0 0 0 3px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Effect 9a */
+.hi-icon-effect-9a .hi-icon:hover:after {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.hi-icon-effect-9a .hi-icon:hover {
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 1);
+  color: #fff;
+}
+
+.hi-icon:hover {
+  svg path {
+    stroke-width: 0.72px;
+  }
+}

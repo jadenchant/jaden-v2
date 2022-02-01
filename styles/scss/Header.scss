@@ -1,0 +1,184 @@
+@import "config";
+
+// Fixed variables
+$hamberger-movement: 0.45s;
+$header-height: 86px;
+$nav-height: 385px;
+
+// Keyframes for hamberger
+@keyframes hamberger-rise {
+  50% {
+    transform: translateY(1vh);
+  }
+}
+
+@keyframes hamberger-fall {
+  50% {
+    transform: translateY(-1vh);
+  }
+}
+
+// Head
+main.head {
+  // font-family: "lora";
+
+  // Header
+  header.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: $header-height;
+    width: 100%;
+    z-index: 2;
+    background-color: $background-header;
+
+    // Hamberger
+    .nav-hamberger {
+      position: fixed;
+      height: 8vh;
+      width: 8vh;
+      left: 1vh;
+      top: 1.4vh;
+      cursor: pointer;
+
+      // Hamberger icon
+      // Middle bar
+      &-icon {
+        position: fixed;
+        left: 1vh;
+        top: 4.8vh;
+        height: 4px;
+        width: 8vh;
+        background-color: $text-color;
+
+        // Top bar
+        &::before {
+          content: "";
+          position: fixed;
+          left: 1vh;
+          top: 2vh;
+          height: 4px;
+          width: 8vh;
+          background-color: $text-color;
+          @include transition-ease;
+        }
+
+        // Bottom bar
+        &::after {
+          content: "";
+          position: fixed;
+          left: 1vh;
+          top: 8vh;
+          height: 4px;
+          width: 8vh;
+          background-color: $text-color;
+          @include transition-ease;
+        }
+
+        // Open animation top and bottom bar
+        &.open {
+          &::before {
+            animation-name: hamberger-fall;
+            animation-duration: $hamberger-movement;
+          }
+
+          &::after {
+            animation-name: hamberger-rise;
+            animation-duration: $hamberger-movement;
+          }
+        }
+
+        // Close animation top and bottom bar
+        &.close {
+          &::before {
+            position: fixed;
+            animation-name: hamberger-rise;
+            animation-duration: $hamberger-movement;
+          }
+
+          &::after {
+            animation-name: hamberger-fall;
+            animation-duration: $hamberger-movement;
+          }
+        }
+      }
+    }
+
+    // Title Jaden Chant
+    .title {
+      font-size: 1.2rem;
+      align-self: center;
+      cursor: default;
+    }
+  }
+
+  // Nav dropdown
+  .nav {
+    position: relative;
+    height: $nav-height;
+    width: 100%;
+    background-color: $accent-color-1;
+
+    // Nav items
+    &-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      list-style: none;
+      height: 100%;
+      width: 100%;
+      padding: 1rem 0 1rem 0;
+
+      // Nav individual items
+      .nav-item {
+        color: $text-color-2;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        align-content: center;
+
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          width: 0%;
+          height: 3px; // Make Bigger
+          bottom: -3px;
+          background-color: $text-color-2;
+          transition-property: left, right;
+          // transition-duration: 3s;
+          // transition-timing-function: ease-out;
+          @include transition-ease-after-nav;
+        }
+
+        &:hover::after {
+          width: 100%;
+          @include transition-ease-after-nav;
+        }
+      }
+    }
+
+    // Initiol position dropdown not in view
+    &.initial {
+      position: fixed;
+      top: $header-height - $nav-height;
+      z-index: +1;
+      @include transition-ease-2;
+    }
+
+    // Final position dropdown in view
+    &.final {
+      position: fixed;
+      top: $header-height;
+      z-index: +1;
+      @include transition-ease-2;
+    }
+
+    // Links
+    a {
+      text-decoration: none;
+    }
+  }
+}
