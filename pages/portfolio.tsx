@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Head from 'next/head'
 import Header from "../components/Header";
 import Social from "../components/Social";
-import "../styles/css/portfolio.css";
 
 export default function Portfolio() {
   const [portfolio, setPortfolio] = useState(null);

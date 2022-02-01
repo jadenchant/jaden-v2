@@ -1,4 +1,3 @@
-import "../styles/css/index.css";
 
 export default function Social() {
   return (

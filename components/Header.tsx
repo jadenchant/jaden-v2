@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 // import "@fontsource/lora";
-import "../styles/css/Header.css";
+import style from "../styles/scss/Header.module.scss";
 
 export default function Header() {
   const [dropdown, setDropdown] = useState(false);

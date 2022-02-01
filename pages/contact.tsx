@@ -28,7 +28,7 @@ export default function Contact() {
     }
   };
 
-  function handleSubmit(event): void {
+  function handleSubmit(event: any): void {
     event.preventDefault();
     const formError = checkValidInputs();
 
