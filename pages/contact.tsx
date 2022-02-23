@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from 'next/head'
+import Head from "next/head";
 import Header from "../components/Header";
 
 // ALso add Google Authentication
@@ -80,7 +80,10 @@ export default function Contact() {
       <Head>
         <title>Contact</title>
         <meta name='description' content='Contact Jaden Chant' />
-        <meta name='keywords' content='Jaden Chant Web-Developer Software Development contact' />
+        <meta
+          name='keywords'
+          content='Jaden Chant Web-Developer Software Development contact'
+        />
         <meta name='author' content='Jaden Chant' />
         <meta
           name='viewport'
@@ -161,4 +164,4 @@ export default function Contact() {
       </section>
     </main>
   );
-};
+}

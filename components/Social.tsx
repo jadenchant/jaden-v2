@@ -1,4 +1,3 @@
-
 export default function Social() {
   return (
     <div className='social flex justify-around h-40 w-full'>
@@ -55,4 +54,4 @@ export default function Social() {
       </div>
     </div>
   );
-};
+}

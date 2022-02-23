@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Head from 'next/head'
+import Head from "next/head";
 import Header from "../components/Header";
 import Social from "../components/Social";
 import SearchForm from "../components/SearchForm";
@@ -23,15 +23,18 @@ export default function Portfolio() {
 
   const headComponent = (
     <Head>
-        <title>Portfolio</title>
-        <meta name='description' content='Homepage' />
-        <meta name='keywords' content='Jaden Chant Web-Developer Software Development home' />
-        <meta name='author' content='Jaden Chant' />
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1.0'
-        ></meta>
-      </Head>
+      <title>Portfolio</title>
+      <meta name='description' content='Homepage' />
+      <meta
+        name='keywords'
+        content='Jaden Chant Web-Developer Software Development home'
+      />
+      <meta name='author' content='Jaden Chant' />
+      <meta
+        name='viewport'
+        content='width=device-width, initial-scale=1.0'
+      ></meta>
+    </Head>
   );
 
   let portfolioDisplay;
@@ -62,4 +65,4 @@ export default function Portfolio() {
       </section>
     </main>
   );
-};
+}

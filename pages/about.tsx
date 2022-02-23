@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 import Header from "../components/Header";
 import Social from "../components/Social";
 
@@ -8,7 +8,10 @@ export default function About() {
       <Head>
         <title>About Me</title>
         <meta name='description' content='About Jaden Chant' />
-        <meta name='keywords' content='Jaden Chant Web-Developer Software Development about' />
+        <meta
+          name='keywords'
+          content='Jaden Chant Web-Developer Software Development about'
+        />
         <meta name='author' content='Jaden Chant' />
         <meta
           name='viewport'
@@ -21,4 +24,4 @@ export default function About() {
       </section>
     </main>
   );
-};
+}

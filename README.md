@@ -3,7 +3,6 @@
 Hosting at [jadenchant.com](https://jadenchant.com)  
 This newer version uses Next.js, redis, and Digital Ocean.
 
-
 ---
 
 _Only `git rm --cache` files with private keys_  

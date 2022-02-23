@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 // import "@fontsource/lora";
 import style from "../styles/scss/Header.module.scss";
 
@@ -47,9 +47,7 @@ export default function Header() {
             // className='nav-item'
             // activeClassName='current'
           >
-            <a className="nav-item">
-              Home
-            </a>
+            <a className='nav-item'>Home</a>
           </Link>
           <Link
             href='/about'
@@ -57,9 +55,7 @@ export default function Header() {
             // className='nav-item'
             // activeClassName='current'
           >
-            <a className="nav-item">
-              About
-            </a>
+            <a className='nav-item'>About</a>
           </Link>
           <Link
             href='/portfolio'
@@ -67,9 +63,7 @@ export default function Header() {
             // className='nav-item'
             // activeClassName='current'
           >
-            <a className="nav-item">
-              Portfolio
-            </a>
+            <a className='nav-item'>Portfolio</a>
           </Link>
           <Link
             href='/contact'
@@ -77,12 +71,10 @@ export default function Header() {
             // className='nav-item'
             // activeClassName='current'
           >
-            <a className="nav-item">
-              Contact
-            </a>
+            <a className='nav-item'>Contact</a>
           </Link>
         </ul>
       </div>
     </main>
   );
-};
+}

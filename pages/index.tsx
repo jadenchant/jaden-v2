@@ -1,23 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/Header'
-import Social from '../components/Social'
+import Head from "next/head";
+import Image from "next/image";
+import Header from "../components/Header";
+import Social from "../components/Social";
 // import styles from '../styles/Home.module.css'
 
-export default function IndexPage(){
+export default function IndexPage() {
   return (
     <main className='index'>
       <Head>
         <title>Jaden Chant</title>
         <meta name='description' content='Homepage' />
-        <meta name='keywords' content='Jaden Chant Web-Developer Software Development home' />
+        <meta
+          name='keywords'
+          content='Jaden Chant Web-Developer Software Development home'
+        />
         <meta name='author' content='Jaden Chant' />
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0'
         ></meta>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3e90cc" />
+        <link rel='manifest' href='/manifest.json' />
+        <meta name='theme-color' content='#3e90cc' />
       </Head>
       <Header />
       <section className='content bg-gray-300'>
@@ -33,4 +36,4 @@ export default function IndexPage(){
       </section>
     </main>
   );
-};
+}

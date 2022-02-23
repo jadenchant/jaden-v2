@@ -1,14 +1,14 @@
-import { Client, Entity, Schema, Repository } from 'redis-om';
+import { Client, Entity, Schema, Repository } from "redis-om";
 
 const client = new Client();
 
 async function connect() {
-    if (!client.isOpen()) {
-        await client.open(process.env.REDIS_URL);
-    }
+  if (!client.isOpen()) {
+    await client.open(process.env.REDIS_URL);
+  }
 }
 
-class Project extends Entity {};
+class Project extends Entity {}
 let schema = new Schema(
   Project,
   {
@@ -42,7 +42,7 @@ export async function createIndex() {
   await connect();
 
   const repository = new Repository(schema, client);
-  await repository.createIndex()
+  await repository.createIndex();
 }
 
 export async function searchProjects(q: any) {
@@ -50,9 +50,12 @@ export async function searchProjects(q: any) {
 
   const repository = new Repository(schema, client);
 
-  const projects = await repository.search()
-    .where('name').equals(q)
-    .or('languages').equals(q)
+  const projects = await repository
+    .search()
+    .where("name")
+    .equals(q)
+    .or("languages")
+    .equals(q)
     // .or('description').match(q)
     .return.all();
 
@@ -64,8 +67,7 @@ export async function getAllProjects() {
 
   const repository = new Repository(schema, client);
 
-  const projects = await repository.search()
-  .return.all();
+  const projects = await repository.search().return.all();
 
   return projects;
 }
