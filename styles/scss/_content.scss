@@ -1,5 +1,6 @@
 @import "config";
 @import "Header.module.scss";
+@import "Search.module.scss";
 
 section.content {
   font-family: "lora";
@@ -123,3 +124,5 @@ section.content {
     stroke-width: 0.72px;
   }
 }
+
+

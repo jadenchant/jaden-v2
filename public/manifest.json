@@ -1,0 +1,47 @@
+{
+  "name": "Jaden Chant",
+  "short_name": "Jaden Chant",
+  "version": "2.0",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d1d5db",
+  "theme_color": "#3e90cc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-v2-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/icon-v2-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/icon-v2-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/icon-v2-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/icon-v2-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-v2-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icon-v2.svg",
+      "type": "image/svg+xml",
+      "sizes": "200x200"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Head from 'next/head'
 import Header from "../components/Header";
 import Social from "../components/Social";
+import SearchForm from "../components/SearchForm";
 
 export default function Portfolio() {
   const [portfolio, setPortfolio] = useState(null);
@@ -54,6 +55,7 @@ export default function Portfolio() {
       <Header />
       <section className='content'>
         <div className='flex content-center justify-center py-7'>
+          <SearchForm />
           {portfolioDisplay}
         </div>
         <Social />

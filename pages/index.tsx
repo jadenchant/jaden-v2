@@ -16,6 +16,8 @@ export default function IndexPage(){
           name='viewport'
           content='width=device-width, initial-scale=1.0'
         ></meta>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3e90cc" />
       </Head>
       <Header />
       <section className='content bg-gray-300'>
