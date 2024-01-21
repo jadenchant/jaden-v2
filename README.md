@@ -1,7 +1,7 @@
 # Jaden's Personal Website
 
 Hosting at [jadenchant.com](https://jadenchant.com)  
-This newer version uses Nuxt.js
+This newer version uses Next.js, redis, and Digital Ocean.
 
 ---
 
